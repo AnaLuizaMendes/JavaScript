@@ -100,3 +100,99 @@ var interest = 'dogs';
 var hobby = 'programming';
 var awesomeMessage = "Hi, my name is " + firstName + ". I love " + interest + ". In my spare time, I like to " + hobby + ".";
 console.log(awesomeMessage);
+
+
+// IF/ELSE STATEMENT IN JS:
+var price = 10.00; //price to buy some easter egg
+var money = 15.00; //money that you have
+if (money >= price) {
+    console.log('You can buy the Easter Egg.');
+} else {
+    console.log('Out of money')
+}
+
+
+// ELIF = else if
+
+var mood = 'happy';
+
+if (mood === 'sad') {
+    console.log('Don\'t be sad, everything is going to be ok!');
+} else if (mood === 'party'){
+    console.log('UHU! It is party time!');
+} else {
+    console.log('I am feeling !')
+}
+
+// Check the number = Even or Odd
+
+var number = 205;
+
+if (number % 2 === 0) {
+    console.log('even')
+} else {
+    console.log('odd')
+}
+
+/* 
+&& = and
+|| = or
+! = not
+ */
+
+// Locations: 'kitchen', 'library', 'billiards room', 'dining room'
+// Suspects: 'Mr. Smith', 'Mrs. Richards', 'Mr. Parker', 'Mrs. Olives'
+
+
+var room = "kitchen";
+var suspect = "Mr. Smith"; 
+var weapon = "";
+var solved = false;
+
+if (room === 'dining room') {
+    weapon = 'knife';
+    if (suspect === 'Mrs. Olives')
+        solved = true;
+} 
+else if (room === 'library') {
+    weapon = 'trophy';
+    if (suspect === 'Mrs. Richards')
+        solved = true;
+} 
+else if (room === 'billiards room') {
+    weapon = 'pool stick';
+    if (suspect === 'Mr. Parker')
+        solved = true;
+} 
+else if (room === 'kitchen') {
+    weapon = 'poison';
+    if (suspect === 'Mr. Smith')
+        solved = true;
+}
+
+if (solved) {
+	console.log(suspect + " did it in the "+ room +" with the "+weapon+"!");
+}
+
+
+//ATM exercise
+
+var balance = 325.00;
+var checkBalance = true;
+var isActive = false;
+
+if (checkBalance === true){
+    if (isActive === true && balance > 0)
+        console.log('Your balance is $' + balance.toFixed(2) + '.');
+    else if (isActive === true && balance === 0)
+        console.log('Your account is empty.');
+    else if (isActive === true && balance < 0)
+        console.log('Your balance is negative. \nPlease contact bank.');
+    else if (isActive === false)
+        console.log('Your account is no longer active.');
+} else {
+    console.log('Thank you. Have a nice day!')
+}
+
+//Ice-cream exercise
+
