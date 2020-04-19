@@ -396,6 +396,54 @@ Declaring variables
 let - New way to declare the variable - CAN CHANGE - any scope (Global, Local, Block)
 var - Old way to declare the variable - CAN CHANGE - just for Global or Local
 const - New way to declare the variable - IT WILL NOT CHANGE - any scope (Global, Local, Block)
+*/
 
+// Row and Seat in the Theater
 
+for (var row = 0; row <= 25; row++) {
+    for (var seat = 0; seat <= 99; seat++)
+        console.log(row + '-' + seat)
+}
 
+// Function Definition 
+
+function laugh(num) {
+    message = ''
+    for (var times = 1; times <= num; times++)
+        message = message + 'ha'
+    return message + '!'
+}
+
+console.log(laugh(7))
+
+// Build a Triangle
+
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+      line += "* "
+    }
+    return line + "\n";
+  }
+
+  function buildTriangle(width) {
+    var lines = ''
+    for (i = 1; i <= width; ++i) {
+        lines += makeLine(i)
+    }
+    return lines
+}
+
+console.log(buildTriangle(10));
+
+/* A function expression is stored inside a variable
+var buildTriangle = function (width) {
+    var lines = ''
+    for (i = 1; i <= width; ++i) {
+        lines += makeLine(i)
+    }
+    return lines
+}
+
+catSays();
+*/
