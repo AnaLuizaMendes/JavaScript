@@ -196,3 +196,206 @@ if (checkBalance === true){
 
 //Ice-cream exercise
 
+var flavor = '';
+var vessel = '';
+var toppings = '';
+var message = 'I\'d like two scoops of ' + flavor +' ice cream in a ' + vessel + ' with ' + toppings + '.'
+
+if ((flavor === 'vanilla' || flavor === 'chocolate') && (vessel === 'cone' || vessel === 'bowl') && (toppings === 'sprinkles' || toppings === 'peanuts')) {
+    console.log(message);
+} 
+
+//Sizes of T-Shirt
+var shirtWidth = 18;
+var shirtLength = 28;
+var shirtSleeve = 8.13;
+
+var size = '';
+
+if ((shirtWidth >= 18 && shirtWidth < 20) && (shirtLength >= 28 && shirtLength < 29) && (shirtSleeve >= 8.13 && shirtSleeve < 8.38)) {
+    size = 'S';
+} else if ((shirtWidth >= 20 && shirtWidth < 22) && (shirtLength >= 29 && shirtLength < 30) && (shirtSleeve >= 8.38 && shirtSleeve < 8.63)) {
+    size = 'M';
+} else if ((shirtWidth >= 22 && shirtWidth < 24) && (shirtLength >= 30 && shirtLength < 31) && (shirtSleeve >= 8.63 && shirtSleeve < 8.88)) {
+    size = 'L';
+} else if ((shirtWidth >= 24 && shirtWidth < 26) && (shirtLength >= 31 && shirtLength < 33) && (shirtSleeve >= 8.88 && shirtSleeve < 9.63)) {
+    size = 'XL';
+} else if ((shirtWidth >= 26 && shirtWidth < 28) && (shirtLength >= 33 && shirtLength < 34) && (shirtSleeve >= 9.63 && shirtSleeve < 10.13)) {
+    size = '2XL';
+} else if ((shirtWidth === 28) && (shirtLength === 34) && (shirtSleeve === 10.13)) {
+    size = '3XL';
+} else {
+    size = 'NA';
+}
+
+console.log(size)
+
+/* Falsy values - elements that evaluates false in a boolean context
+1. boolean value false
+2. null
+3. 0
+4. ''
+5. NaN
+*/
+
+//Food chain exercise
+
+var eatsPlants = true;
+var eatsAnimals = true;
+
+var category = eatsPlants ? (eatsAnimals ? 'omnivore' : 'herbivore') : (eatsAnimals ? 'carnivore' : 'undefined');
+
+console.log(category);
+
+/* Switch statement:
+swith (variable) {
+    case [value]:
+        do;
+        break(if you want to stop in this case);
+    case [value]:
+        do;
+        break(if you want to stop in this case);
+    ...
+    case [value]:
+        do;
+        (doesn't need break, cause is the last one);
+}
+
+The "falling-through" behavior:
+If you don't use break statement, your code will run not only the case that matches the condition,
+but also the following ones. 
+
+You can also create one 'do' for more then one value:
+    case 1:
+    case 2:
+    case 3:
+        do ...;
+    case 4:
+    case 5:
+        do ...;
+
+You can add a default case: it will be executed when none of the values match (like else)
+*/
+
+// Salary/Completed Education exercise
+
+
+var education = '';
+var salary = 0;
+
+switch (education) {
+    case 'no high school diploma':
+        salary = 25636;
+        break;
+    case 'a high school diploma':
+        salary = 35256;
+        break;
+    case 'an Associate\'s degree':
+        salary = 41496;
+        break;
+    case 'a Bachelor\'s degree':
+        salary = 59124;
+        break;
+    case 'a Master\'s degree':
+        salary = 69732;
+        break;
+    case 'a Professional degree':
+        salary = 89960;
+        break;
+    case 'a Doctoral degree':
+        salary = 84396;
+        break;
+}
+
+console.log('In 2015, a person with ' + education + ' earned an average of $' + salary.toLocaleString('en-US') + '/year.');
+
+/*
+LOOPS
+*/
+
+var i = 1
+
+while (x <= 10000) {
+    console.log(i)
+    i += 1
+}
+
+//JuliaJames exercise
+
+var x = 1;
+
+while (x <= 20) {
+    if (x % 3 === 0)
+        if (x % 5 === 0)
+            console.log('JuliaJames')
+        else
+            console.log('Julia')
+    else if (x % 5 === 0)
+        console.log('James')
+    else 
+        console.log(x)
+    x += 1
+}
+
+
+// Counting down the bottles
+
+var num = 99;
+
+while (num > 0) {
+    if (num === 2) 
+        console.log(num + ' bottles of juice on the wall! ' + num + ' bottles of juice! Take one down, pass it around... ' + (num - 1) + ' bottle of juice on the wall!');
+    else if (num === 1) 
+        console.log(num + ' bottle of juice on the wall! ' + num + ' bottle of juice! Take one down, pass it around... ' + (num - 1) + ' bottles of juice on the wall!');
+    else
+        console.log(num + ' bottles of juice on the wall! ' + num + ' bottles of juice! Take one down, pass it around... ' + (num - 1) + ' bottles of juice on the wall!');
+    num -= 1
+}
+
+
+// NASA counting down
+
+var seconds = 60
+
+while (seconds >= 0) {
+    if (seconds === 50)
+        console.log('Orbiter transfers from ground to internal power')
+    else if (seconds === 31)
+        console.log('Ground launch sequencer is go for auto sequence start')
+    else if (seconds === 16)
+        console.log('Activate launch pad sound suppression system')
+    else if (seconds === 10)
+        console.log('Activate main engine hydrogen burnoff system')
+    else if (seconds === 6)
+        console.log('Main engine start')
+    else if (seconds === 0)
+        console.log('Solid rocket booster ignition and liftoff!')
+    else 
+        console.log('T-' + seconds + ' seconds')
+    seconds -= 1
+} 
+
+/* 
+FOR LOOP
+for (start; stop; step){
+    do
+}
+*/
+
+// Factorial 12
+var solution = 12
+
+for (var i = 11; i > 0; i--) {
+    solution =  solution * i; 
+}
+
+console.log(solution)
+
+/*
+Declaring variables
+let - New way to declare the variable - CAN CHANGE - any scope (Global, Local, Block)
+var - Old way to declare the variable - CAN CHANGE - just for Global or Local
+const - New way to declare the variable - IT WILL NOT CHANGE - any scope (Global, Local, Block)
+
+
+
