@@ -447,3 +447,95 @@ var buildTriangle = function (width) {
 
 catSays();
 */
+
+// Arrays!
+
+var donuts = ['glazed', 'chocolate frosted', 'cinnamon', 'sprinkled'];
+console.log(donuts[0]);
+
+// If you want to change a value in an array, you can.
+// You just need to assign the array index to a different value
+
+donuts[1] = 'white chocolate'
+
+
+// Examples
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+console.log(crew);
+
+/* This way you will print each by each:
+
+for (index = 0; index < crew.length; index++) {
+    console.log(crew[index]);
+}
+*/
+
+// Methods
+// Reverse, Sort, Length, Push (add an element in the end of your array) & Pop...
+
+// Shift() and Unshift() - Remove or add elements in the beginning of the array 
+
+/* SPLICE METHOD 
+arrayName.splice(arg1, arg2, item1, ..., itemX);
+arg1: Mandatory - Start position to add or remove the element(s)
+arg2: Optional - Count of elements that will be removed, if any.
+item(s): Elements to be added to your array (starting from the position arg1)
+*/
+
+var rainbow = ['Red', 'Orange', 'Blackberry', 'Blue'];
+
+rainbow.splice(2, 1, 'Yellow', 'Green')
+rainbow.splice(5,0, 'Purple')
+console.log(rainbow)
+
+// ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple']
+
+// Harry team exercise - Check if the team counts at least 7 players
+
+var team = ["Oliver Wood",  "George Weasley", "Fred Weasley", "Harry Potter"];
+console.log(hasEnoughPlayers(team));
+
+function hasEnoughPlayers(list) {
+    if (list.length >= 7)
+        return true
+    else 
+        return false
+}
+
+/* 
+.forEach(element, index, array)
+Method in arrays that allows you to loop over each element
+Element: Value in the array ('Oliver Wood')
+Index: Position 0 (team[0])
+Array: The entire array
+*/
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4,
+    19, 300, 3775, 299, 36, 209, 148, 169, 299,
+    6, 109, 20, 58, 139, 59, 3, 1, 139
+];
+
+test.forEach(function sum (num, index){
+    if (num % 3 === 0)
+        test[index] += 100
+        
+})
+
+console.log(test)
+
+// MAP .map(func) (Creat a new array)
+
+// Tips exercise - Get an array and increase the numbers by 15% each
+
+var bills = [50.23, 19.12, 34.01,
+    100.11, 12.15, 9.90, 29.11, 12.99,
+    10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+
+var totals = bills.map(function tips(num) {
+    num = Number((num * 1.15).toFixed(2))
+    return num
+})
+
+console.log(totals)
