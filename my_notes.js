@@ -539,3 +539,104 @@ var totals = bills.map(function tips(num) {
 })
 
 console.log(totals)
+
+// Odd/Even exercise 
+// Check if the number is odd or even, and replace the number for the string 'odd' or 'even'
+
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+
+for (r = 0; r < numbers.length; r++) {
+    for (c = 0; c < numbers[r].length; c++) {
+        if (numbers[r][c] % 2 === 0)
+            numbers[r][c] = 'even';
+        else
+            numbers[r][c] = 'odd';
+    }
+}
+
+console.log(numbers);
+
+// OBJECTS - Data structure that store a Data about a particular thing
+
+/*
+var object = {
+    color: red,
+    key: value,
+    // Method: How to create
+    open: function() {
+        if...
+        else...
+    }
+    
+};
+*/
+
+var breakfast = {
+    name: 'The Great Pancake',
+    price: 8.95,
+    ingredients: ['pancakes', 'syrup', 'strawberries', 'sugar', 'lime']
+};
+
+console.log(breakfast)
+
+// Facebook Exercise - Properties and Methods
+
+var facebookProfile = {
+    name: 'Ana Luiza',
+    friends: 100,
+    messages: ['Today I am feeling very positive!'],
+    postMessage: function postMessage(message) {
+        facebookProfile.messages.push(message);
+    }, 
+    deleteMessage: function deleteMessage(index) {
+        facebookProfile.messages.splice(index,1);
+    },
+    addFriend: function addFriend() {
+        facebookProfile.friends += 1;
+    },
+    removeFriend: function removeFriend() {
+        facebookProfile.friends -= 1;
+    }
+}
+
+facebookProfile.postMessage('Hello, friend!')
+console.log(facebookProfile.messages)
+
+facebookProfile.deleteMessage(1)
+console.log(facebookProfile.messages)
+
+facebookProfile.postMessage('Hi Rob!')
+console.log(facebookProfile.messages)
+
+facebookProfile.removeFriend
+console.log(facebookProfile.friends)
+
+// Using a forEach() in an object
+
+var myDonuts = [
+    { type: "Raspberries", cost: 1.50 },
+    { type: "White Chocolate", cost: 1.50 },
+    { type: "Salted Caramel", cost: 1.99 },
+    { type: "Chocolate", cost: 1.00 }
+];
+
+donuts.forEach(function(elem, index){
+    console.log(myDonuts[index].type +' donuts cost $'+ myDonuts[index].cost +' each.');
+})
+
+// Another way
+
+donuts.forEach(function(myDonuts){
+    console.log(myDonuts.type +' donuts cost $'+ myDonuts.cost +' each.');
+})
