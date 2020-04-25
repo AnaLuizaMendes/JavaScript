@@ -1,3 +1,6 @@
+// NOTES
+//COURSE INTRO TO PROGRAMMING BY UDACITY 
+
 //this is a comment
 /* this is 
 a multi-line 
